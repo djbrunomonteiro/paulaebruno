@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+@import 'swiper/scss';
+@import 'swiper/scss/autoplay';
+@import 'swiper/scss/keyboard';
+@import 'swiper/scss/pagination';
+@import 'swiper/scss/scrollbar';
+@import 'swiper/scss/zoom';
+
+
+@font-face {
+    font-family: 'Chapaza'; //This is what we are going to call
+    src: url('./assets/fonts/Chapaza.ttf');
+}
+
+@font-face {
+    font-family: 'Chapaza Italic'; //This is what we are going to call
+    src: url('./assets/fonts/Chapaza Italic.ttf');
+}
+@font-face {
+    font-family: 'Rainbow Saturday demo'; //This is what we are going to call
+    src: url('./assets/fonts/Rainbow Saturday demo.ttf');
+}
+
+* {
+    font-size: 20px;
+    font-family: 'Chapaza' !important;
+}
+a{
+    text-decoration: none;
+}
+
+.font1{
+    font-family: 'Chapaza' !important;
+}
+
+.font2{
+    font-family: 'Chapaza Italic' !important;
+}
+
+.font3{
+    font-family: 'Rainbow Saturday demo' !important;
+}

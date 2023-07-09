@@ -1,0 +1,238 @@
+.swiper {
+    width: 100%;
+    height: 100vh;
+
+    // border: 1px solid;
+    .page1 {
+        width: 100%;
+        height: 100%;
+        background-image: url("../../../assets/imgs/bg-00.png");
+        background-color: #cccccc;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        object-fit: cover;
+
+        display: flex;
+        align-items: end;
+        justify-content: center;
+
+        .container {
+            font-size: 1.5rem;
+            color: white;
+            width: 80%;
+            height: 350px;
+            // border: 2px solid;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+
+
+           
+            .animar1{
+                overflow: hidden;
+                letter-spacing: 2px;
+                border-right: 1px solid #000;
+                white-space: nowrap;
+                animation: typing 4s steps(10, end), blink-caret 0.5s step-end infinite;
+
+            }
+
+            .animar2{
+                overflow: hidden;
+                letter-spacing: 2px;
+                border-right: 1px solid #000;
+                white-space: nowrap;
+                animation: typing 4s steps(30, end), blink-caret 0.5s step-end infinite;
+
+            }
+
+            .animar3{
+                overflow: hidden;
+                letter-spacing: 2px;
+                border-right: 1px solid #000;
+                white-space: nowrap;
+                animation: typing 8s steps(40, end), blink-caret 0.5s step-end infinite;
+
+            }
+
+
+
+        }
+
+
+    }
+
+    .page2 {
+        width: 100%;
+        height: 100%;
+        background-image: url("../../../assets/imgs/bg-02.png");
+        background-color: #cccccc;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        object-fit: cover;
+        letter-spacing: 5px;
+
+        .container {
+            font-size: 1.5rem;
+            color: black;
+            width: 98%;
+            height: 100%;
+            // border: 2px solid;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            .header{
+                // margin-top: 25px;
+                width: 100%;
+                position: relative;
+                height: 150px;
+                .sobre{
+                    font-size: 1rem;
+                    position: fixed;
+                    top: 20px;
+                    left: 50px;
+                    right: 50px;
+                    
+                }
+                .casamento{
+                    font-size: 5rem;
+                    position: fixed;
+                    top: -20px;
+                    left: 50px;
+                    right: 50px;
+                }
+            }
+
+            .imagem{
+                width: 100%;
+                height: 30vh;
+                display: flex;
+                align-items: end;
+                justify-content: center;
+                img{
+                    margin-top: 20px;
+                    width: 300px;
+                    height: 250px;
+                }
+            }
+
+            .quando{
+                width: 100%;
+                height: 20vh;
+                p{
+                    padding: 0px;
+                    margin: 0px;
+                    font-size: 0.5rem;
+                }
+                h3{
+                    padding: 0px;
+                    margin: 0px;
+                    font-size: 1.4rem;
+                }
+            }
+
+            .onde{
+                width: 100%;
+                height: 50vh !important;
+                letter-spacing: 2px;
+                
+                p{
+                    padding: 0px;
+                    margin: 5px;
+                    font-size: 0.7rem;
+                }
+                h3{
+                    padding: 0px;
+                    margin: 0px;
+                    font-size: 1.5rem;
+                }
+                
+                iframe{
+                    width: 290px;
+                    height: 200px;
+                }
+
+            }
+
+
+           
+            .animar1{
+                overflow: hidden;
+                letter-spacing: 2px;
+                border-right: 1px solid #000;
+                white-space: nowrap;
+                animation: typing 4s steps(10, end), blink-caret 0.5s step-end infinite;
+
+            }
+
+            .animar2{
+                overflow: hidden;
+                letter-spacing: 2px;
+                border-right: 1px solid #000;
+                white-space: nowrap;
+                animation: typing 4s steps(30, end), blink-caret 0.5s step-end infinite;
+
+            }
+
+            .animar3{
+                overflow: hidden;
+                letter-spacing: 2px;
+                border-right: 1px solid #000;
+                white-space: nowrap;
+                animation: typing 8s steps(40, end), blink-caret 0.5s step-end infinite;
+
+            }
+
+
+
+        }
+
+
+    }
+
+    .page3 {
+        width: 100%;
+        height: 100%;
+        background-image: url("../../../assets/imgs/bg-01.png");
+        background-color: #cccccc;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        object-fit: cover;
+
+    }
+}
+
+@keyframes typing {
+    from {
+      width: 0; /* Inicia com largura zero */
+    }
+    to {
+      width: 100%; /* Termina com largura total */
+    }
+    /* Adicionando uma regra para iniciar a animação blink-caret após a animação typing */
+    /* e adicionando um atraso para que o cursor pisque e desapareça apenas no final */
+    100% {
+      animation: blink-caret 0.5s step-end 1s infinite;
+    }
+  }
+
+/* Definindo a animação do cursor piscante */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+        /* Inicia e termina com o cursor invisível */
+    }
+
+    50% {
+        border-color: #0c0c0ca8;
+        /* Cursor visível no meio da animação */
+    }
+    
+}

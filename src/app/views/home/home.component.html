@@ -1,0 +1,58 @@
+<div class="row justify-content-center m-0 p-0">
+    <div class="col-12 p-0 m-0 ">
+        <swiper class="swiper" (swiper)="getSwiper($event)" [pagination]="true" [loop]="false" [autoplay]="true">
+            <ng-template swiperSlide>
+                <div class="page1 p-0 m0">
+                    <div class="container">
+                        <div>
+                            <p class="font2 m-0 p-0 animar1">Seja Bem vindo (a) </p>
+                            <p class="font2 m-0 p-2 animar2">Brenda Monteiro</p>
+                        </div>
+                        <div>
+                            <p class="animar3">Arraste pro lado...</p>
+                        </div>
+                    </div>
+
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="page2">
+                    <div class="container">
+                        <div class="header">
+                            <p class="sobre m-0 p-0 ">SOBRE O </p>
+                            <p class="casamento font3 m-0 p-0">casamento</p>
+                        </div>
+
+                        <div class="imagem">
+                            <img src="../../../assets/imgs/sobre-00.png" alt="">
+                        </div>
+                        <div class="quando">
+                            <p>QUANDO ?</p>
+                            <h3>18.08.23</h3>
+                            <p>QUE HORAS?</p>
+                            <h3>18:30h</h3>
+                        </div>
+                        <div class="onde p-2">
+                            <p>ONDE ?</p>
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15943.544577685172!2d-44.2807084!3d-2.5439772!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7f68fb0a4982499%3A0x9b36761f4edb23d6!2sDivinus%20Eventos!5e0!3m2!1spt-BR!2sbr!4v1688874089828!5m2!1spt-BR!2sbr"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                            <h3 class="font2">Divinus Eventos</h3>
+                            <p>R. da Liberdade, 50 - Bairro de Fatima
+                            </p>
+                            <p>Referência: Rua Atrás do Hospital Guaras</p>
+                            <button type="button" class="btn btn-outline-success btn-sm w-100 m-2">Abrir no Maps</button>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+            <ng-template swiperSlide>
+                <div class="page3">
+
+                </div>
+            </ng-template>
+        </swiper>
+    </div>
+</div>
