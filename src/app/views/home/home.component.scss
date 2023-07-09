@@ -29,8 +29,8 @@
             justify-content: space-around;
 
 
-           
-            .animar1{
+
+            .animar1 {
                 overflow: hidden;
                 letter-spacing: 2px;
                 border-right: 1px solid #000;
@@ -39,7 +39,7 @@
 
             }
 
-            .animar2{
+            .animar2 {
                 overflow: hidden;
                 letter-spacing: 2px;
                 border-right: 1px solid #000;
@@ -48,7 +48,7 @@
 
             }
 
-            .animar3{
+            .animar3 {
                 overflow: hidden;
                 letter-spacing: 2px;
                 border-right: 1px solid #000;
@@ -67,10 +67,66 @@
     .page2 {
         width: 100%;
         height: 100%;
-        background-image: url("../../../assets/imgs/bg-02.png");
+        background-image: url("../../../assets/imgs/bg-03.png");
         background-color: #cccccc;
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
+        background-repeat: space;
+        background-size: 550px 100%;
+        background-position: center;
+        object-fit: contain;
+        letter-spacing: 2px;
+
+        .container {
+            font-size: 1rem;
+            width: 100%;
+            height: 100%;
+            // border: 2px solid;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+
+            h3 {
+                text-align: center;
+                font-size: 4rem;
+                line-height: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+                text-align: justify;
+                text-justify: inter-word;
+                line-height: 1rem;
+            }
+
+            .bg-text{
+                padding: 10px;
+            }
+
+            .imagem{
+                width: 150px;
+                height: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img{
+                    height: 100%;
+                }
+            }
+        }
+
+
+    }
+
+    .page3 {
+        width: 100%;
+        height: 100%;
+        background-image: url("../../../assets/imgs/bg-03.png");
+        background-color: #cccccc;
+        background-repeat: space;
+        background-size: 550px 100%;
+        background-position: center;
         object-fit: cover;
         letter-spacing: 5px;
 
@@ -86,20 +142,22 @@
             align-items: center;
             justify-content: space-between;
 
-            .header{
+            .header {
                 // margin-top: 25px;
                 width: 100%;
                 position: relative;
                 height: 150px;
-                .sobre{
+
+                .sobre {
                     font-size: 1rem;
                     position: fixed;
                     top: 20px;
                     left: 50px;
                     right: 50px;
-                    
+
                 }
-                .casamento{
+
+                .casamento {
                     font-size: 5rem;
                     position: fixed;
                     top: -20px;
@@ -108,51 +166,55 @@
                 }
             }
 
-            .imagem{
+            .imagem {
                 width: 100%;
                 height: 30vh;
                 display: flex;
                 align-items: end;
                 justify-content: center;
-                img{
+
+                img {
                     margin-top: 20px;
                     width: 300px;
                     height: 250px;
                 }
             }
 
-            .quando{
+            .quando {
                 width: 100%;
                 height: 20vh;
-                p{
+
+                p {
                     padding: 0px;
                     margin: 0px;
                     font-size: 0.5rem;
                 }
-                h3{
+
+                h3 {
                     padding: 0px;
                     margin: 0px;
                     font-size: 1.4rem;
                 }
             }
 
-            .onde{
+            .onde {
                 width: 100%;
                 height: 50vh !important;
                 letter-spacing: 2px;
-                
-                p{
+
+                p {
                     padding: 0px;
                     margin: 5px;
                     font-size: 0.7rem;
                 }
-                h3{
+
+                h3 {
                     padding: 0px;
                     margin: 0px;
                     font-size: 1.5rem;
                 }
-                
-                iframe{
+
+                iframe {
                     width: 290px;
                     height: 200px;
                 }
@@ -160,8 +222,8 @@
             }
 
 
-           
-            .animar1{
+
+            .animar1 {
                 overflow: hidden;
                 letter-spacing: 2px;
                 border-right: 1px solid #000;
@@ -170,7 +232,7 @@
 
             }
 
-            .animar2{
+            .animar2 {
                 overflow: hidden;
                 letter-spacing: 2px;
                 border-right: 1px solid #000;
@@ -179,7 +241,7 @@
 
             }
 
-            .animar3{
+            .animar3 {
                 overflow: hidden;
                 letter-spacing: 2px;
                 border-right: 1px solid #000;
@@ -195,31 +257,185 @@
 
     }
 
-    .page3 {
+    .page4 {
         width: 100%;
         height: 100%;
-        background-image: url("../../../assets/imgs/bg-01.png");
+        background-image: url("../../../assets/imgs/bg-03.png");
         background-color: #cccccc;
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
+        background-repeat: space;
+        background-size: 750px 100%;
+        background-position: center;
         object-fit: cover;
+        letter-spacing: 5px;
+
+        .container {
+            font-size: 1.5rem;
+            color: black;
+            width: 98%;
+            height: 100%;
+            // border: 2px solid;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            .header {
+                // margin-top: 25px;
+                width: 100%;
+                position: relative;
+                height: 150px;
+
+                .sobre {
+                    font-size: 1rem;
+                    position: fixed;
+                    top: 20px;
+                    left: 50px;
+                    right: 50px;
+
+                }
+
+                .casamento {
+                    font-size: 5rem;
+                    position: fixed;
+                    top: -20px;
+                    left: 50px;
+                    right: 50px;
+                }
+            }
+            .cont-text{
+                letter-spacing: 2px;
+                text-align: justify;
+                text-justify: inter-word;
+                line-height: 1.2rem;
+                padding: 20px;
+
+            }
+            .cont-pix{
+                height: 400px;
+                h4{
+                    font-size: 2rem;
+                }
+                .titular{
+                    font-size: 0.9rem;
+                    letter-spacing: 2px;
+                }
+                .banco{
+                    font-size: 0.9rem;
+                    letter-spacing: 2px;
+                }
+            }
+
+        }
+
+    }
+
+    .page5 {
+        width: 100%;
+        height: 100%;
+        background-image: url("../../../assets/imgs/bg-03.png");
+        background-color: #cccccc;
+        background-repeat: space;
+        background-size: 750px 100%;
+        background-position: center;
+        object-fit: cover;
+        letter-spacing: 4px;
+
+        .container {
+            font-size: 1.5rem;
+            color: black;
+            width: 98%;
+            height: 100%;
+            // border: 2px solid;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h4{
+                font-size: 1.2rem;
+            }
+            .imagem{
+                width: 350px;
+                height: 180px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 20px;
+                img{
+                    height: 100%;
+                    color: red;
+                }
+            }
+
+
+        }
+
+    }
+
+    .page5 {
+        width: 100%;
+        height: 100%;
+        background-image: url("../../../assets/imgs/bg-03.png");
+        background-color: #cccccc;
+        background-repeat: space;
+        background-size: 750px 100%;
+        background-position: center;
+        object-fit: cover;
+        letter-spacing: 4px;
+
+        .container {
+            font-size: 1.5rem;
+            color: black;
+            width: 98%;
+            height: 100%;
+            // border: 2px solid;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h4{
+                font-size: 1.2rem;
+            }
+            .imagem{
+                width: 350px;
+                height: 180px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 20px;
+                img{
+                    height: 100%;
+                    color: red;
+                }
+            }
+
+
+        }
 
     }
 }
 
 @keyframes typing {
     from {
-      width: 0; /* Inicia com largura zero */
+        width: 0;
+        /* Inicia com largura zero */
     }
+
     to {
-      width: 100%; /* Termina com largura total */
+        width: 100%;
+        /* Termina com largura total */
     }
+
     /* Adicionando uma regra para iniciar a animação blink-caret após a animação typing */
     /* e adicionando um atraso para que o cursor pisque e desapareça apenas no final */
     100% {
-      animation: blink-caret 0.5s step-end 1s infinite;
+        animation: blink-caret 0.5s step-end 1s infinite;
     }
-  }
+}
 
 /* Definindo a animação do cursor piscante */
 @keyframes blink-caret {
@@ -234,5 +450,5 @@
         border-color: #0c0c0ca8;
         /* Cursor visível no meio da animação */
     }
-    
+
 }

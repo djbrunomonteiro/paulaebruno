@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
 
       this.slidesRef?.slideNext()
 
-    },1000)
+    },6000)
   }
 
 }
