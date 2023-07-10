@@ -374,7 +374,7 @@
 
     }
 
-    .page5 {
+    .page6 {
         width: 100%;
         height: 100%;
         background-image: url("../../../assets/imgs/bg-03.png");
@@ -397,27 +397,36 @@
             align-items: center;
             justify-content: center;
 
-            h4{
-                font-size: 1.2rem;
-            }
-            .imagem{
-                width: 350px;
-                height: 180px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 20px;
-                img{
-                    height: 100%;
-                    color: red;
+            .header {
+                // margin-top: 25px;
+                width: 100%;
+                position: relative;
+                height: 150px;
+
+                .sobre {
+                    font-size: 1rem;
+
+                }
+
+                .casamento {
+                    font-size: 4rem;
+
                 }
             }
 
+            .img-slider{
+                width: 100%;
+            }
+
+            .vers{
+                margin: 20px;
+            }
 
         }
 
     }
 }
+
 
 @keyframes typing {
     from {
