@@ -6,7 +6,7 @@
                     <div class="container">
                         <div>
                             <p class="font2 m-0 p-0 animar1">Seja Bem vindo (a) </p>
-                            <p class="font2 m-0 p-2 animar2">Brenda Monteiro</p>
+                            <p class="font2 m-0 p-2 animar2 text-uppercase">{{user?.nomes}}</p>
                         </div>
                         <div>
                             <p class="animar3">Arraste pro lado...</p>
@@ -27,7 +27,7 @@
                                 É com muita alegria e emoção que nós, Paula e Bruno, convidamos você
                             </p>
                             <h3  class="m-0 p-3 color-sec font3">
-                                Maria das Dores
+                                {{user?.nomes | removeAcentuacao}}
                             </h3>
                             <p class="color-pri">
                                 para celebrar conosco o momento mais especial de nossas vidas: 
@@ -109,7 +109,7 @@
                                 alternativa pode tornar a experiência mais conveniente tanto para vocês quanto para nós.
                             </p>
                             <p>
-                                Lembramos o que mais desejamos é ter a
+                                Lembrando, o que mais desejamos é ter a
                                 presença e o carinho de cada um de vocês em nosso casamento.
                             </p>
 
@@ -128,17 +128,38 @@
             <ng-template swiperSlide>
                 <div class="page5">
                     <div class="container">
-                        <div>
-                            <h4 class="color-pri color-sec font2">Agora que você sabe todas as informações sobre o nosso casamento, é hora de confirmar presença ♡</h4>
-                        </div>
+                        <ng-container *ngIf="!user?.confirmado; else confirmado">
+                            <div>
+                                <h4  class="color-pri color-sec font2">Agora que você sabe todas as informações sobre o nosso casamento, é hora de confirmar presença ♡</h4>
+                            </div>
+    
+                            <div class="imagem">
+                                <img src="../../../assets/imgs/border.png" alt="">
+                            </div>
+    
+                            <button (click)="confirmarPresenca()" type="button" class="btn btn-outline-success w-100 m-3 ">
+                                CONFIRMAR PRESENÇA
+                            </button>
 
-                        <div class="imagem">
-                            <img src="../../../assets/imgs/border.png" alt="">
-                        </div>
+                        </ng-container>
 
-                        <button (click)="confirmarPresenca()" type="button" class="btn btn-outline-success w-100 m-3 ">
-                            CONFIRMAR PRESENÇA
-                        </button>
+                        <ng-template #confirmado>
+                            <div>
+                                <h4  class="color-pri font2">Presença confirmada ♡</h4>
+                                <p class="color-sec">Falta pouco...</p>
+                            </div>
+    
+                            <div class="imagem2">
+                                <img src="../../../assets/imgs/pre-wedding/34.jpg" alt="">
+                            </div>
+
+                            <p class="color-pri font1">{{this.cronometro}}</p>
+
+                            <p class="color-sec">Aproveite e olhe as fotos do pré-wedding</p>
+                            <p class="color-sec">Arraste pro lado...</p>
+                            
+
+                        </ng-template>
 
                     </div>
                 </div>

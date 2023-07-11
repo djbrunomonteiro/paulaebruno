@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,24 +13,30 @@ import { AlertComponent } from './share/alert/alert.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
 import { DialogComponent } from './share/dialog/dialog.component';
+import { RemoveAcentuacaoPipe } from './pipes/remove-acentuacao.pipe';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AlertComponent,
-    DialogComponent
+    DialogComponent,
+    RemoveAcentuacaoPipe
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    HttpClientModule,
     SwiperModule,
     NgImageSliderModule,
     ClipboardModule,
     MatSnackBarModule,
     MatDialogModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -4,8 +4,13 @@ import { HomeComponent } from './views/home/home.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'convidados/:id',
     component: HomeComponent
+  },
+  {
+    path: '',
+    redirectTo: 'convidados/43',
+    pathMatch: 'full'
   }
 ];
 
