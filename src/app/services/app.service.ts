@@ -8,7 +8,9 @@ import { environment } from 'src/environments/environment.development';
 })
 export class AppService {
 
-  BASE_URL = environment.apiUrl
+  BASE_URL = environment.apiUrl;
+
+
 
   constructor(private http: HttpClient) { }
 

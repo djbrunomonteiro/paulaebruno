@@ -1,3 +1,4 @@
+
 .swiper {
     width: 100%;
     height: 100vh;
@@ -439,7 +440,6 @@
     }
 }
 
-
 @keyframes typing {
     from {
         width: 0;
@@ -472,4 +472,173 @@
         /* Cursor visível no meio da animação */
     }
 
+}
+
+@media (min-width: 975px) {
+    .container{
+        padding-top: 80px;
+    }
+    img{
+        max-height: 180px;
+        max-height: 150px;
+    }
+    iframe{
+        max-height: 150px;
+        max-height: 100px;
+    }
+    
+}
+
+@media (max-width: 375px) {
+    .page3 {
+        width: 100%;
+        height: 100%;
+        background-image: url("../../../assets/imgs/bg-03.png");
+        background-color: #cccccc;
+        background-repeat: space;
+        background-size: 550px 100%;
+        background-position: center;
+        object-fit: cover;
+        letter-spacing: 5px;
+
+        .container {
+            font-size: 1.5rem;
+            color: black;
+            width: 98%;
+            height: 100%;
+            // border: 2px solid;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            .header {
+                // margin-top: 25px;
+                width: 100%;
+                position: relative;
+                height: 170px;
+
+                .sobre {
+                    font-size: 1rem;
+                    position: fixed;
+                    top: 10px;
+                    left: 50px;
+                    right: 50px;
+
+                }
+
+                .casamento {
+                    font-size: 4rem !important;
+                    position: fixed;
+                    top: 10px!important;
+                    left: 50px;
+                    right: 50px;
+                }
+            }
+
+            .imagem {
+                width: 150px !important;
+                height: 100px !important;
+                display: flex;
+                align-items: end;
+                justify-content: center;
+
+                img {
+                    margin-top: 20px;
+                    width: 200px !important;
+                    height: 160px !important;;
+                }
+            }
+
+            iframe{
+                width: 180px !important;
+                height: 150px !important;
+            }
+
+
+
+        }
+
+
+    }
+
+    .page4 {
+        .container {
+            .header {
+                // margin-top: 25px;
+                width: 100%;
+                position: relative;
+                height: 150px;
+
+                .casamento {
+                    font-size: 4rem;
+                    position: fixed;
+                    top: 10px !important;
+                    left: 50px;
+                    right: 50px;
+                }
+            }
+
+
+        }
+
+    }
+
+    .page5 {
+        width: 100%;
+        height: 100%;
+        background-image: url("../../../assets/imgs/bg-03.png");
+        background-color: #cccccc;
+        background-repeat: space;
+        background-size: 750px 100%;
+        background-position: center;
+        object-fit: cover;
+        letter-spacing: 4px;
+
+        .container {
+            font-size: 1.5rem;
+            color: black;
+            width: 98%;
+            height: 100%;
+            // border: 2px solid;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h4{
+                font-size: 1.2rem;
+            }
+            .imagem{
+                width: 350px;
+                height: 150px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 20px;
+                img{
+                    height: 150px !important;
+                }
+            }
+
+            .imagem2{
+                width: 100%;
+                height: 180px !important;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 20px;
+                img{
+                    height: 100% !important;
+
+                }
+            }
+
+
+        }
+
+    }
+    
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
 
   imgsWeeding: any[] = [];
 
-  user:any;
+  user: any;
 
   private startTime: Date = new Date();
   private endTime: Date = new Date("2023-08-18T18:30:00");;
@@ -31,13 +31,16 @@ export class HomeComponent implements OnInit {
 
   cronometro: any;
 
+  getScreenWidth: any;
+  getScreenHeight: any;
+
   constructor(
     private _clipboardService: ClipboardService,
     private _snackBar: MatSnackBar,
     public dialog: MatDialog,
     private appService: AppService,
     private activated: ActivatedRoute
-  ){
+  ) {
     this.intervalId = 0;
 
   }
@@ -46,7 +49,8 @@ export class HomeComponent implements OnInit {
     this.proximo();
     this.gerarLinksImgs();
     this.getUser();
-    this.start()
+    this.start();
+    this.getScreen();
   }
 
   slideChanged(slides: any) {
@@ -86,66 +90,76 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  copyPix(){
+  copyPix() {
     this._clipboardService.copy('98970278027');
     this.openSnackBar();
   }
 
-  openSnackBar(){
-    this ._snackBar.openFromComponent(AlertComponent, {duration: 2000});
- }
- 
- getUser(){
-  const id = this.activated?.snapshot?.paramMap.get('id');
-  console.log(id);
-  
-  this.appService.getOne(id).subscribe(res =>{
-    console.log(res);
-    if(res?.status === 200){
-      this.user = res.results;
-      
-    }
-    
+  openSnackBar() {
+    this._snackBar.openFromComponent(AlertComponent, { duration: 2000 });
+  }
 
-  })
+  getUser() {
+    const id = this.activated?.snapshot?.paramMap.get('id');
+    console.log(id);
 
- }
+    this.appService.getOne(id).subscribe(res => {
+      console.log(res);
+      if (res?.status === 200) {
+        this.user = res.results;
 
- confirmarPresenca(): void {
-  console.log(this.user);
-  
-  const user = {...this.user, confirmado: 'sim'};
-  console.log(user);
+      }
 
-  if(!user?.id){return;}
 
-  this.appService.editOne(user?.id, user).pipe(first(res => res)).subscribe(res =>{
-    this.getUser()
-  })
+    })
 
-}
+  }
 
-start(): void {
-  this.intervalId = setInterval(() => {
-    const currentTime = new Date();
-    const remainingTime = this.endTime.getTime() - currentTime.getTime();
+  confirmarPresenca(): void {
+    console.log(this.user);
 
-    if (remainingTime <= 0) {
-      this.stop();
-      console.log("Cronômetro finalizado!");
-    } else {
-      const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-      const hours = Math.floor(remainingTime / (1000 * 60 * 60));
-      const minutes = Math.floor((remainingTime / (1000 * 60)) % 60);
-      const seconds = Math.floor((remainingTime / 1000) % 60);
+    const user = { ...this.user, confirmado: 'sim' };
+    console.log(user);
 
-      this.cronometro = `${days} dias, ${hours}h:${minutes}min:${seconds}seg`
-    }
-  }, 1000);
-}
+    if (!user?.id) { return; }
 
-stop(): void {
-  clearInterval(this.intervalId);
-}
+    this.appService.editOne(user?.id, user).pipe(first(res => res)).subscribe(res => {
+      this.getUser()
+    })
+
+  }
+
+  start(): void {
+    this.intervalId = setInterval(() => {
+      const currentTime = new Date();
+      const remainingTime = this.endTime.getTime() - currentTime.getTime();
+
+      if (remainingTime <= 0) {
+        this.stop();
+        console.log("Cronômetro finalizado!");
+      } else {
+        const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(remainingTime / (1000 * 60 * 60));
+        const minutes = Math.floor((remainingTime / (1000 * 60)) % 60);
+        const seconds = Math.floor((remainingTime / 1000) % 60);
+
+        this.cronometro = `${days} dias, ${hours}h:${minutes}min:${seconds}seg`
+      }
+    }, 1000);
+  }
+
+  stop(): void {
+    clearInterval(this.intervalId);
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onWindowResize() {
+    this.getScreen();
+  }
+
+  getScreen(){
+    this.getScreenWidth = window.innerWidth;
+    this.getScreenHeight =  window.innerHeight
+  }
 
 }

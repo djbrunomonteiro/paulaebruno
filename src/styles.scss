@@ -54,3 +54,17 @@ a{
 .color-ter{
     color: #636038;
 }
+
+@media (min-width: 975px) {
+    *{
+        font-size: 10px;
+    }
+    
+}
+
+@media (max-width: 375px) {
+    *{
+        font-size: 14px;
+    }
+    
+}
