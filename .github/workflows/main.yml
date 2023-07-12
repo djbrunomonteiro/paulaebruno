@@ -19,7 +19,7 @@ jobs:
       with:
         node-version: 16.20.0
     - name: Install packages with NPM
-      run: npm install
+      run: npm install --force
     - name: Build for production
       run: npm run build
     - name: Upload artifacts to be used in next job
