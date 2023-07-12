@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
 import { DialogComponent } from './share/dialog/dialog.component';
 import { RemoveAcentuacaoPipe } from './pipes/remove-acentuacao.pipe';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 
@@ -37,7 +38,9 @@ import { RemoveAcentuacaoPipe } from './pipes/remove-acentuacao.pipe';
     MatDialogModule
   ],
 
-  providers: [],
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
