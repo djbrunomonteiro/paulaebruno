@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, map, of } from 'rxjs';
 import { environment } from 'src/environments/environment.development';
@@ -16,24 +16,19 @@ export class AppService {
 
   getOne(id: any) {
     console.log(`${this.BASE_URL}/${id}`);
+    let headers = new HttpHeaders();
+    headers = headers.set('Content-Type', 'application/json; charset=utf-8');
     
-    return this.http.get(`${this.BASE_URL}/${id}`, {headers: {header: 'Access-Control-Allow-Origin'}}).pipe(
-      map(res => {
-        console.log(res);
-        return res
-      } ),
-      catchError((err: any) => {
-
-        console.log('error', err);
-        
-        return of(err?.error)
-
-      } )
+    return this.http.get(`${this.BASE_URL}/${id}`, {headers}).pipe(
+      map(res => res),
+      catchError((err: any) => of (err?.error) )
     );
   }
 
   editOne(id: any, data: any) {
-    return this.http.patch(`${this.BASE_URL}/${id}`, data, {headers: {header: 'Access-Control-Allow-Origin'}}).pipe(
+    let headers = new HttpHeaders();
+    headers = headers.set('Content-Type', 'application/json; charset=utf-8');
+    return this.http.patch(`${this.BASE_URL}/${id}`, data, {headers}).pipe(
       map(res => res),
       catchError((err: any) => of(err?.error))
     );
