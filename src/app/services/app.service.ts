@@ -15,9 +15,20 @@ export class AppService {
   constructor(private http: HttpClient) { }
 
   getOne(id: any) {
+    console.log(`${this.BASE_URL}/${id}`);
+    
     return this.http.get(`${this.BASE_URL}/${id}`).pipe(
-      map(res => res),
-      catchError((err: any) => of(err?.error))
+      map(res => {
+        console.log(res);
+        return res
+      } ),
+      catchError((err: any) => {
+
+        console.log('error', err);
+        
+        return of(err?.error)
+
+      } )
     );
   }
 

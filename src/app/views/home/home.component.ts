@@ -104,7 +104,7 @@ export class HomeComponent implements OnInit {
     console.log(id);
 
     this.appService.getOne(id).subscribe(res => {
-      console.log(res);
+      console.log('res appService', res);
       if (res?.status === 200) {
         this.user = res.results;
 
