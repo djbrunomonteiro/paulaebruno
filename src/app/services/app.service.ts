@@ -17,7 +17,7 @@ export class AppService {
   getOne(id: any) {
     console.log(`${this.BASE_URL}/${id}`);
     
-    return this.http.get(`${this.BASE_URL}/${id}`).pipe(
+    return this.http.get(`${this.BASE_URL}/${id}`, {headers: {header: 'Access-Control-Allow-Origin'}}).pipe(
       map(res => {
         console.log(res);
         return res
@@ -33,7 +33,7 @@ export class AppService {
   }
 
   editOne(id: any, data: any) {
-    return this.http.patch(`${this.BASE_URL}/${id}`, data).pipe(
+    return this.http.patch(`${this.BASE_URL}/${id}`, data, {headers: {header: 'Access-Control-Allow-Origin'}}).pipe(
       map(res => res),
       catchError((err: any) => of(err?.error))
     );
