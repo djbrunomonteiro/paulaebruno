@@ -15,7 +15,6 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { DialogComponent } from './share/dialog/dialog.component';
 import { RemoveAcentuacaoPipe } from './pipes/remove-acentuacao.pipe';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
 
 
 
@@ -37,7 +36,6 @@ import { IonicModule } from '@ionic/angular';
     ClipboardModule,
     MatSnackBarModule,
     MatDialogModule,
-    IonicModule.forRoot()
   ],
 
   providers: [
