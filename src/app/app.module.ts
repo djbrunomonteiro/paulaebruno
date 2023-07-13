@@ -11,10 +11,11 @@ import { ClipboardModule } from 'ngx-clipboard';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { AlertComponent } from './share/alert/alert.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatDialog, MAT_DIALOG_DATA, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
+import {MatDialogModule} from '@angular/material/dialog';
 import { DialogComponent } from './share/dialog/dialog.component';
 import { RemoveAcentuacaoPipe } from './pipes/remove-acentuacao.pipe';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { IonicModule } from '@ionic/angular';
 
 
 
@@ -35,7 +36,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     NgImageSliderModule,
     ClipboardModule,
     MatSnackBarModule,
-    MatDialogModule
+    MatDialogModule,
+    IonicModule.forRoot()
   ],
 
   providers: [

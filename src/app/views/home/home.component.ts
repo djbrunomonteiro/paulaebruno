@@ -34,6 +34,7 @@ export class HomeComponent implements OnInit {
   getScreenWidth: any;
   getScreenHeight: any;
 
+
   constructor(
     private _clipboardService: ClipboardService,
     private _snackBar: MatSnackBar,
@@ -42,7 +43,6 @@ export class HomeComponent implements OnInit {
     private activated: ActivatedRoute
   ) {
     this.intervalId = 0;
-
   }
 
   ngOnInit(): void {

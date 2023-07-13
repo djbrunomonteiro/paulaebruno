@@ -1,6 +1,6 @@
 <div class="row justify-content-center m-0 p-0">
     <div  class="col-12 p-0 m-0 ">
-        <swiper class="swiper" (swiper)="getSwiper($event)" [pagination]="true" [loop]="false" [autoplay]="true">
+        <swiper class="swiper" (swiper)="getSwiper($event)" [pagination]="true" [loop]="false" [autoplay]="true" [autoHeight]="false">
             <ng-template swiperSlide>
                 <div class="page1 p-0 m-0">
                     <div class="container">
@@ -27,6 +27,7 @@
                                 É com muita alegria e emoção que nós, Paula e Bruno, convidamos vocês
                             </p>
                             <h3  class="m-0 p-3 color-sec font3">
+                                Paula e Familia
                                 {{user?.nomes | removeAcentuacao}}
                             </h3>
                             <p class="color-pri">
@@ -56,8 +57,8 @@
                 <div class="page3">
                     <div class="container">
                         <div class="header">
-                            <p class="sobre m-0 p-0 color-pri">SOBRE O </p>
-                            <p class="casamento font3 m-0 p-0 color-sec">casamento</p>
+                            <p class="titulo m-0 p-0 color-pri">SOBRE O </p>
+                            <p class="subtitulo font3 m-0 p-0 color-sec">casamento</p>
                         </div>
 
                         <div class="imagem">
@@ -79,14 +80,13 @@
                                 referrerpolicy="no-referrer-when-downgrade">
                             </iframe>
                             <h3 class="font2 color-sec">Divinus Eventos</h3>
-                            <p class="color-sec">Rua da Liberdade, 50 - Bairro de Fátima
+                            <p class="color-sec">Rua da Liberdade nº50 - Bairro de Fátima (Atrás do Hospital Guarás)
                             </p>
-                            <p class="color-sec">(Atrás do Hospital Guarás)</p>
-                            <button type="button" class="btn btn-outline-success btn-sm w-100 m-2">Abrir no
+                            <button type="button" class="btn btn-outline-success w-100 m-2">Abrir no
                                 Maps</button>
 
                             <div>
-                                <p class="color-sec font2 animar3" >Ainda não terminou...Arraste pro lado...</p>
+                                <p class="color-sec font2 animar3" >Arraste pro lado...</p>
                             </div>
                         </div>
                     </div>
@@ -97,8 +97,8 @@
                 <div class="page4">
                     <div class="container">
                         <div class="header">
-                            <p class="sobre m-0 p-0 color-pri">SOBRE OS </p>
-                            <p class="casamento font3 m-0 p-1 color-sec">presentes</p>
+                            <p class="titulo m-0 p-0 color-pri">SOBRE OS </p>
+                            <p class="subtitulo font3 m-0 p-1 color-sec">presentes</p>
                         </div>
 
                         <div class="cont-text color-pri">
@@ -118,8 +118,8 @@
                             <p class="color-sec font2">CHAVE PIX</p>
                             <h4  class="color-pri">(98) 97027-8027</h4>
                             <p class="color-sec font2 titular m-0 pt-2">KELVIN BRUNO MONTEIRO</p>
-                            <p class="color-sec font2 banco m-0 p-0">NUBANK PAGAMENTOS</p>
-                            <button (click)="copyPix()" type="button" class="btn btn-outline-success w-100 m-2">COPIAR CHAVE PIX</button>
+                            <p class="color-sec font2 banco m-0 p-0 mb-2 ">NUBANK PAGAMENTOS</p>
+                            <button (click)="copyPix()" type="button" class="btn btn-outline-success w-100">COPIAR CHAVE PIX</button>
                         </div>
                     </div>
                 </div>
@@ -169,11 +169,9 @@
                 <div class="page6">
                     <div class="container">
                         <div class="header">
-                            <p class="sobre m-0 p-0 color-pri">FOTOS </p>
-                            <p class="casamento font3 m-0 p-0 color-sec">pre wedding</p>
+                            <p class="titulo m-0 p-0 color-pri">FOTOS </p>
+                            <p class="subtitulo font3 m-0 p-0 color-sec">pre wedding</p>
                         </div>
-                        <!-- <img src="../../../assets/imgs/pre-wedding/" alt=""> -->
-
                         <ng-image-slider class="img-slider" [images]="imgsWeeding" #nav></ng-image-slider>
 
                         <div class="vers">
@@ -190,3 +188,4 @@
         </swiper>
     </div>
 </div>
+

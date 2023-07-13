@@ -6,7 +6,8 @@
     // border: 1px solid;
     .page1 {
         width: 100%;
-        height: 100%;
+        min-height: 100%;
+        padding: 10px;
         background-image: url("../../../assets/imgs/bg-00.png");
         background-color: #cccccc;
         background-repeat: no-repeat;
@@ -21,7 +22,7 @@
             font-size: 1.5rem;
             color: white;
             width: 80%;
-            height: 350px;
+            height: 250px;
             // border: 2px solid;
             text-align: center;
             display: flex;
@@ -75,6 +76,7 @@
         background-position: center;
         object-fit: contain;
         letter-spacing: 2px;
+        
 
         .container {
             font-size: 1rem;
@@ -85,20 +87,24 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-between;
-            padding: 20px;
+            justify-content: space-around;
+            padding: 25px;
 
             h3 {
                 text-align: center;
-                font-size: 4rem;
-                line-height: 2rem;
+                font-size: 3.5rem !important;
+                line-height: 2rem ;
+            }
+            h5{
+                font-size: 1.5rem !important;
+                line-height: 2rem ;
             }
 
             p {
                 font-size: 1rem;
-                text-align: justify;
+                text-align: start;
                 text-justify: inter-word;
-                line-height: 1rem;
+                line-height: 1.5rem;
             }
 
             .bg-text{
@@ -130,54 +136,48 @@
         background-position: center;
         object-fit: cover;
         letter-spacing: 5px;
+        display: flex;
+        align-items: end;
+        justify-content: center;
 
         .container {
             font-size: 1.5rem;
             color: black;
-            width: 98%;
+            width: 100%;
             height: 100%;
             // border: 2px solid;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
+            padding: 30px;
 
             .header {
                 // margin-top: 25px;
                 width: 100%;
-                position: relative;
-                height: 150px;
+                height: 100px;
 
-                .sobre {
-                    font-size: 1rem;
-                    position: fixed;
-                    top: 20px;
-                    left: 50px;
-                    right: 50px;
+                .titulo {
+                    font-size: 1.6rem;
+                    margin: 0px;
+                    padding: 0px;
+                    margin-top: 10px;
 
                 }
 
-                .casamento {
-                    font-size: 5rem;
-                    position: fixed;
-                    top: -20px;
-                    left: 50px;
-                    right: 50px;
+                .subtitulo {
+                    font-size: 3.7rem !important;
+                    line-height: 0px;
+                    margin: 0px;
+                    padding: 0px;
                 }
             }
 
             .imagem {
-                width: 100%;
-                height: 30vh;
-                display: flex;
-                align-items: end;
-                justify-content: center;
-
                 img {
                     margin-top: 20px;
-                    width: 300px;
-                    height: 250px;
+                    height: 180px;
                 }
             }
 
@@ -188,13 +188,13 @@
                 p {
                     padding: 0px;
                     margin: 0px;
-                    font-size: 0.5rem;
+                    font-size: 0.8rem !important;
                 }
 
                 h3 {
                     padding: 0px;
                     margin: 0px;
-                    font-size: 1.4rem;
+                    font-size: 1.6rem !important;
                 }
             }
 
@@ -212,12 +212,12 @@
                 h3 {
                     padding: 0px;
                     margin: 0px;
-                    font-size: 1.5rem;
+                    font-size: 1.3rem !important;
                 }
 
                 iframe {
                     width: 290px;
-                    height: 200px;
+                    height: 150px;
                 }
 
             }
@@ -268,54 +268,54 @@
         background-position: center;
         object-fit: cover;
         letter-spacing: 5px;
+        padding: 30px;
 
         .container {
             font-size: 1.5rem;
             color: black;
-            width: 98%;
+            width: 100%;
             height: 100%;
             // border: 2px solid;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
 
             .header {
                 // margin-top: 25px;
                 width: 100%;
-                position: relative;
-                height: 150px;
+                height: 100px;
 
-                .sobre {
-                    font-size: 1rem;
-                    position: fixed;
-                    top: 20px;
-                    left: 50px;
-                    right: 50px;
+                .titulo {
+                    font-size: 1.6rem;
+                    margin: 0px;
+                    padding: 0px;
+                    margin-top: 10px;
 
                 }
 
-                .casamento {
-                    font-size: 5rem;
-                    position: fixed;
-                    top: -20px;
-                    left: 50px;
-                    right: 50px;
+                .subtitulo {
+                    font-size: 3.7rem !important;
+                    line-height: 0px;
+                    margin: 0px;
+                    padding: 0px;
                 }
             }
             .cont-text{
-                letter-spacing: 2px;
-                text-align: justify;
-                text-justify: inter-word;
-                line-height: 1.2rem;
+                letter-spacing: 3px;
+                text-align: start;
+                line-height: 1.3rem;
+                line-height: normal;
                 padding: 20px;
+
+                
 
             }
             .cont-pix{
-                height: 400px;
+                height: auto;
                 h4{
-                    font-size: 2rem;
+                    font-size: 2rem !important;
                 }
                 .titular{
                     font-size: 0.9rem;
@@ -340,7 +340,7 @@
         background-size: 750px 100%;
         background-position: center;
         object-fit: cover;
-        letter-spacing: 4px;
+        letter-spacing: 2px;
 
         .container {
             font-size: 1.5rem;
@@ -355,11 +355,10 @@
             justify-content: center;
 
             h4{
-                font-size: 1.2rem;
+                font-size: 1.2rem !important;
             }
             .imagem{
-                width: 350px;
-                height: 180px;
+                height: 130px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -370,8 +369,7 @@
             }
 
             .imagem2{
-                width: 100%;
-                height: 350px;
+                height: 250px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -413,17 +411,21 @@
             .header {
                 // margin-top: 25px;
                 width: 100%;
-                position: relative;
-                height: 150px;
+                height: 100px;
 
-                .sobre {
-                    font-size: 1rem;
+                .titulo {
+                    font-size: 1.6rem;
+                    margin: 0px;
+                    padding: 0px;
+                    margin-top: 10px;
 
                 }
 
-                .casamento {
-                    font-size: 4rem;
-
+                .subtitulo {
+                    font-size: 3.5rem !important;
+                    line-height: 10px;
+                    margin: 0px;
+                    padding: 0px;
                 }
             }
 
@@ -474,171 +476,3 @@
 
 }
 
-@media (min-width: 975px) {
-    .container{
-        padding-top: 80px;
-    }
-    img{
-        max-height: 180px;
-        max-height: 150px;
-    }
-    iframe{
-        max-height: 150px;
-        max-height: 100px;
-    }
-    
-}
-
-@media (max-width: 375px) {
-    .page3 {
-        width: 100%;
-        height: 100%;
-        background-image: url("../../../assets/imgs/bg-03.png");
-        background-color: #cccccc;
-        background-repeat: space;
-        background-size: 550px 100%;
-        background-position: center;
-        object-fit: cover;
-        letter-spacing: 5px;
-
-        .container {
-            font-size: 1.5rem;
-            color: black;
-            width: 98%;
-            height: 100%;
-            // border: 2px solid;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-
-            .header {
-                // margin-top: 25px;
-                width: 100%;
-                position: relative;
-                height: 170px;
-
-                .sobre {
-                    font-size: 1rem;
-                    position: fixed;
-                    top: 10px;
-                    left: 50px;
-                    right: 50px;
-
-                }
-
-                .casamento {
-                    font-size: 4rem !important;
-                    position: fixed;
-                    top: 10px!important;
-                    left: 50px;
-                    right: 50px;
-                }
-            }
-
-            .imagem {
-                width: 150px !important;
-                height: 100px !important;
-                display: flex;
-                align-items: end;
-                justify-content: center;
-
-                img {
-                    margin-top: 20px;
-                    width: 200px !important;
-                    height: 160px !important;;
-                }
-            }
-
-            iframe{
-                width: 180px !important;
-                height: 150px !important;
-            }
-
-
-
-        }
-
-
-    }
-
-    .page4 {
-        .container {
-            .header {
-                // margin-top: 25px;
-                width: 100%;
-                position: relative;
-                height: 150px;
-
-                .casamento {
-                    font-size: 4rem;
-                    position: fixed;
-                    top: 10px !important;
-                    left: 50px;
-                    right: 50px;
-                }
-            }
-
-
-        }
-
-    }
-
-    .page5 {
-        width: 100%;
-        height: 100%;
-        background-image: url("../../../assets/imgs/bg-03.png");
-        background-color: #cccccc;
-        background-repeat: space;
-        background-size: 750px 100%;
-        background-position: center;
-        object-fit: cover;
-        letter-spacing: 4px;
-
-        .container {
-            font-size: 1.5rem;
-            color: black;
-            width: 98%;
-            height: 100%;
-            // border: 2px solid;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            h4{
-                font-size: 1.2rem;
-            }
-            .imagem{
-                width: 350px;
-                height: 150px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 20px;
-                img{
-                    height: 150px !important;
-                }
-            }
-
-            .imagem2{
-                width: 100%;
-                height: 180px !important;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 20px;
-                img{
-                    height: 100% !important;
-
-                }
-            }
-
-
-        }
-
-    }
-    
-}
