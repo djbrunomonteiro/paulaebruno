@@ -22,7 +22,9 @@
             font-size: 1.5rem;
             color: white;
             width: 80%;
-            height: 250px;
+            height: 150px;
+            margin-bottom: 130px;
+
             // border: 2px solid;
             text-align: center;
             display: flex;
@@ -91,23 +93,23 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
-            padding: 25px;
+            padding: 0px 25px;
 
             h3 {
                 text-align: center;
-                font-size: 3.5rem !important;
-                line-height: 2rem ;
+                font-size: 3.0rem !important;
+                line-height: 1.0rem;
             }
             h5{
                 font-size: 1.5rem !important;
-                line-height: 2rem ;
+                line-height: 1rem;
             }
 
             p {
                 font-size: 1rem;
                 text-align: start;
                 text-justify: inter-word;
-                line-height: 1.5rem;
+                line-height: 1.1rem;
             }
 
             .bg-text{
@@ -159,7 +161,6 @@
             .header {
                 // margin-top: 25px;
                 width: 100%;
-                height: 100px;
 
                 .titulo {
                     font-size: 1.6rem;
@@ -186,7 +187,7 @@
 
             .quando {
                 width: 100%;
-                height: 20vh;
+                // height: 20vh;
 
                 p {
                     padding: 0px;
@@ -271,7 +272,7 @@
         background-position: center;
         object-fit: cover;
         letter-spacing: 5px;
-        padding: 30px;
+        padding: 10px;
 
         .container {
             font-size: 1.5rem;
@@ -288,7 +289,6 @@
             .header {
                 // margin-top: 25px;
                 width: 100%;
-                height: 100px;
 
                 .titulo {
                     font-size: 1.6rem;
@@ -304,13 +304,13 @@
                     margin: 0px;
                     padding: 0px;
                 }
+                padding: 10px;
             }
             .cont-text{
-                letter-spacing: 3px;
+                letter-spacing: 2px;
                 text-align: start;
-                line-height: 1.3rem;
-                line-height: normal;
-                padding: 20px;
+                line-height: 1.2rem;
+                padding: 10px;
 
                 
 
