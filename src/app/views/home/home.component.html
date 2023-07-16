@@ -1,5 +1,5 @@
 <div class="row justify-content-center m-0 p-0 ">
-    <div  class="col-12 p-0 m-0 ">
+    <div class="p-0 m-0" [ngClass]="{'col-12': getScreenWidth <= 875, 'col-4': getScreenWidth > 875}"  >
         <swiper class="swiper" (swiper)="getSwiper($event)" [pagination]="false" [loop]="false" [autoplay]="false" [autoHeight]="false">
             <ng-template swiperSlide>
                 <div class="page1 p-0 m-0">
