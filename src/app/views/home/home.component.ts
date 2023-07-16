@@ -27,7 +27,10 @@ export class HomeComponent implements OnInit {
 
   private startTime: Date = new Date();
   private endTime: Date = new Date("2023-08-18T18:30:00");;
-  private intervalId: any
+  private intervalId: any;
+
+
+  confirmacaoConvidado = 'nao';
 
   cronometro: any;
 
@@ -39,18 +42,24 @@ export class HomeComponent implements OnInit {
     private _clipboardService: ClipboardService,
     private _snackBar: MatSnackBar,
     public dialog: MatDialog,
-    private appService: AppService,
-    private activated: ActivatedRoute
+    public appService: AppService,
+    private activated: ActivatedRoute,
   ) {
     this.intervalId = 0;
   }
 
   ngOnInit(): void {
-    this.proximo();
     this.gerarLinksImgs();
     this.getUser();
     this.start();
     this.getScreen();
+    this.checkConfirmacao();
+    // this.appService.gerarLInks().subscribe(res=> console.log(res)); //para dev
+  }
+  
+
+  checkConfirmacao() {
+    this.confirmacaoConvidado = localStorage.getItem('casamento_paulaebruno_confirmado') ?? 'nao';
   }
 
   slideChanged(slides: any) {
@@ -67,13 +76,6 @@ export class HomeComponent implements OnInit {
     this.sliderAtual = this.slidesRef?.realIndex;
   }
 
-  proximo() {
-    setTimeout(() => {
-
-      this.slidesRef?.slideNext()
-
-    }, 6000)
-  }
 
   gerarLinksImgs() {
     this.imgsWeeding = [];
@@ -100,32 +102,14 @@ export class HomeComponent implements OnInit {
   }
 
   getUser() {
-    const id = this.activated?.snapshot?.paramMap.get('id');
-    console.log(id);
-
-    this.appService.getOne(id).subscribe(res => {
-      console.log('res appService', res);
-      if (res?.status === 200) {
-        this.user = res.results;
-
-      }
-
-
-    })
+    const nomes = this.activated?.snapshot?.paramMap.get('nomes');
+    this.appService.getOne(nomes).subscribe(res => this.user = res)
 
   }
 
   confirmarPresenca(): void {
-    console.log(this.user);
-
-    const user = { ...this.user, confirmado: 'sim' };
-    console.log(user);
-
-    if (!user?.id) { return; }
-
-    this.appService.editOne(user?.id, user).pipe(first(res => res)).subscribe(res => {
-      this.getUser()
-    })
+    localStorage.setItem('casamento_paulaebruno_confirmado', 'sim');
+    this.checkConfirmacao();
 
   }
 
@@ -157,9 +141,15 @@ export class HomeComponent implements OnInit {
     this.getScreen();
   }
 
-  getScreen(){
+  getScreen() {
     this.getScreenWidth = window.innerWidth;
-    this.getScreenHeight =  window.innerHeight
+    this.getScreenHeight = window.innerHeight
   }
+
+  goToLink(url: string) {
+    window.open(url, "_blank");
+  }
+
+
 
 }

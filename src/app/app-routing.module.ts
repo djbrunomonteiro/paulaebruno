@@ -4,12 +4,12 @@ import { HomeComponent } from './views/home/home.component';
 
 const routes: Routes = [
   {
-    path: 'convidados/:id',
+    path: ':nomes',
     component: HomeComponent
   },
   {
     path: '',
-    redirectTo: 'convidados/43',
+    redirectTo: '/nosso-convidado',
     pathMatch: 'full'
   }
 ];
