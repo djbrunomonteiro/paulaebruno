@@ -30,10 +30,11 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.0.1",
-    "@angular/cli": "~16.0.1",
+    "@angular/cli": "~16.1.8",
     "@angular/compiler-cli": "^16.0.0",
     "@ionic/angular-toolkit": "latest",
     "@types/jasmine": "~4.3.0",
+    "browserslist": "^4.21.10",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
