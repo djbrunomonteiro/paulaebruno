@@ -1,27 +1,27 @@
-# PaulaebrunoSite
+# Convite de Casamento de Paula e Bruno
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.1.
+Apresento o convite para o nosso casamento, um projeto desenvolvido usando Angular@16.
 
-## Development server
+Acesse preview: https://paulaebruno.site/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Nossa intenção era criar um convite personalizado para os nossos convidados, fornecendo informações sobre o casamento e mostrando fotos do nosso pré-casamento.
 
-## Code scaffolding
+Aqui estão alguns detalhes do projeto:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Dados dos Convidados: O arquivo convidados.json está na pasta "Assets", contendo todas as informações sobre os nossos convidados especiais.
 
-## Build
+Rota Personalizada: Criei uma rota personalizada baseada nos nomes dos convidados, garantindo uma experiência única para cada pessoa.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Visualização Interativa com SwiperJS: Utilizei o SwiperJS para criar a visualização de cada etapa do casamento.
 
-## Running unit tests
+Observações:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Devido à falta de tempo, simplifiquei ao máximo para garantir que funcione e compile rapidamente.
 
-## Running end-to-end tests
+A aplicação está hospedada em um servidor compartilhado na hosting.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Se fosse para um projeto mais genérico e reutilizável, teria adotado uma abordagem diferente.
 
-## Further help
+[![Captura-de-tela-2023-09-29-085121.png](https://i.postimg.cc/BQsCPCJq/Captura-de-tela-2023-09-29-085121.png)](https://postimg.cc/grShf8w5)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[![Captura-de-tela-2023-09-29-085145.png](https://i.postimg.cc/c4mBR8Jf/Captura-de-tela-2023-09-29-085145.png)](https://postimg.cc/vc4nMTfm)
